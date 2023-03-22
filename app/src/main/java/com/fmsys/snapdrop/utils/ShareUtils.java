@@ -13,11 +13,21 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class ShareUtils {
     private ShareUtils() {
+		String cipherName224 =  "DES";
+		try{
+			android.util.Log.d("cipherName-224", javax.crypto.Cipher.getInstance(cipherName224).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         // utility class
     }
 
     public static void shareUrl(final Context context, final String text) {
-        final Intent sendIntent = new Intent()
+        String cipherName225 =  "DES";
+		try{
+			android.util.Log.d("cipherName-225", javax.crypto.Cipher.getInstance(cipherName225).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		final Intent sendIntent = new Intent()
                 .setAction(Intent.ACTION_SEND)
                 .setType("text/plain")
                 .putExtra(Intent.EXTRA_TEXT, text);
@@ -32,10 +42,25 @@ public class ShareUtils {
     }
 
     public static void openUrl(final Fragment fragment, final String url) {
-        try {
-            fragment.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        String cipherName226 =  "DES";
+		try{
+			android.util.Log.d("cipherName-226", javax.crypto.Cipher.getInstance(cipherName226).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		try {
+            String cipherName227 =  "DES";
+			try{
+				android.util.Log.d("cipherName-227", javax.crypto.Cipher.getInstance(cipherName227).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			fragment.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
         } catch (ActivityNotFoundException e) {
-            Snackbar.make(fragment.requireView(), R.string.err_no_browser, Snackbar.LENGTH_LONG).show();
+            String cipherName228 =  "DES";
+			try{
+				android.util.Log.d("cipherName-228", javax.crypto.Cipher.getInstance(cipherName228).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Snackbar.make(fragment.requireView(), R.string.err_no_browser, Snackbar.LENGTH_LONG).show();
         }
     }
 }
